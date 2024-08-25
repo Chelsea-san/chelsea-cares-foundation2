@@ -196,6 +196,12 @@ nav a:hover{
 }
 
 
+hr{
+  height: 2px;
+  background-color: #dddddd;
+  border: 1px solid #dddddd;
+}
+
 
 @media(max-width:1030px){
     .hideOnMobile{

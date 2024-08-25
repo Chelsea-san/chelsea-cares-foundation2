@@ -1,237 +1,202 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
-    margin: 0px;
-    padding: 0px;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #f2f2f2;
-    line-height: 1.5;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  line-height: 1.5;
+  font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-nav{
-    background: white;
-    height: 80px;
-    width: 100%;
-}
-
-
-
-nav .logo-img {
-  margin-top: 0;
-  padding-top: 0;
-  height: 110px;
+/* Logo*/
+.logo img{
   width: 110px;
-  vertical-align: middle; /* align logo image vertically */
 }
-
-
-nav .logo {
-  line-height: 80px; /* align company name vertically */
-  display: inline-block; /* display company name inline with logo image */
+.logo{
+  flex: 1;
 }
-
+/* Nav*/
+nav{
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  height: 90px;/* increase navbar height*/
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
 nav ul{
-  float: right;
-  margin-right:20px;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
 }
-
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
+nav li{
+  height: 50px;
 }
-
-nav ul li a{
-  display: inline-block;
-  font-size:20px;
-  padding: 5px 15px;
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
   color: black;
 }
-
 nav a:hover{
   color:aquamarine;
   transition: .05s ease;
 }
 
+nav a, .sidebar a {
+  padding: 10px 20px; /* Adjust for better spacing */
+  font-size: 18px; /* Make it a bit larger for readability */
+}
 
-.side-bar{
+
+/* Sidebar*/
+  .sidebar {
     position: fixed;
     top: 0;
-    width:100%;
+    right: -300px; /* Makes sure this is off-screen */
     height: 100vh;
-    max-width: none;
-    z-index: 999;
-    backdrop-filter: blur(10px);
-    background-color:rgba(255, 255, 255, 0.2);
-    margin-left: 80%;
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
-    display:flex;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for less transparency */
+    backdrop-filter: blur(15px); /* Adjust the blur effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
+    list-style: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-  }
-
-.side-bar li{
-  width: 100%;
-}
-
-.side-bar a{
-  width: 100%;
-}
-
-.menu-button{
-  display: none;
-}
-
-
-
-
-
-
-.footer{
-  margin-top: 300px;
-  background-color: grey;
-  padding: 70px 0;
-}
-
-.container{
-  margin: auto;
-
-}
-
-.row{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap;
-}
-ul{
-  list-style: none;
-}
-
-.footer-column{
-  width: 25%;
-  padding: 0 15px;
-}
-
-.footer-column h4{
-  font-size: 18px;
-  color: black;
-  text-transform: capitalize;
-  margin-bottom: 35px;
-  font-weight: 500;
-  position: relative;
-
-}
-.footer-column .addr{
-  margin-right: 160px;
-}
-
-
-.footer-column h4::before{
-  content:'';
-  position: absolute;
-  left:0;
-  bottom: -5px;
-  background-color:aqua;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-
-.footer-column ul li:not(:last-child){
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a{
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-  font-weight: 300;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.3s ease;
-}
-
-.footer-column ul li a:hover{
-  color: #ffffff;
-  padding-left: 8px;
-}
-
-
-
-.footer-column .social-links a {
-  height: 55px;
-  width: 55px;
-  background-color: rgba(255,255,255,0.2);
-  margin: 0 10px 10px 0;
-  border-radius: 50%;
-  color: #ffffff;
-  padding: 10px;
-  transition: all 0.5s ease;
-}
-
-.footer-column .social-links a:hover{
-  color: #24262b;
-  background-color:#ffffff;
-}
-
-
-
-
-@media(max-width:1030px){
-    .hideOnMobile{
-      display: none;
+    transition: right 0.5s ease-in-out; /* Smooth slide effect */
+      z-index: 1000; /* Ensures it stays on top of other elements */
     }
-    .menu-button{
-      display: block;
-    }
-
-  }
-
-
-
-@media(max-width:412px){
-      .side-bar{
-        display: block;
-        width:100%;
-      }
-      nav ul li{
-        display: block;
-        width: 100%;
-      }
-  }
-
-    
-
-
-
-
-
-
   
-@media(max-width : 767px){
-      .footer-column{
-        width:50%;
-        margin-bottom:30px;
-      }
-    }
-    
-@media(max-width : 767px){
-      .footer-column{
-        width:50%;
-        margin-bottom:30px;
-      }
-    }
+  .menu-button {
+    display: block;
+  }
+  
+  .sidebar-open .menu-button {
+    display: none; /* Hide menu icon when sidebar is open */
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+  
+/* Beginning of Footer*/
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #24262b;
+      padding: 70px 0;
+  }
+  .footer-col{
+    width: 33.33%; /* Set each column to take up one-third of the row */
+    padding: 0 15px;
+    margin-bottom: 30px; /* Ensure there's space between rows on smaller screens */
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color:aquamarine;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col p {
+    font-size: 16px; /* Makes the font size readable */
+    color: #bbbbbb; /* Uses a softer color to match the footer */
+    line-height: 1.6; /* Adds some line height for better spacing */
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+/* End of Footer*/
 
 
-    @media(max-width : 320px){
-      .footer-column{
-        width:100%;
-      }
-    }
+/* Responsiveness*/
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .logo img{
+    display: block;
+  }
+  .footer-col{
+    width: 50%;
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+    right: -100%; /* Fully hides it off-screen */
+  }
+  .footer-col{
+    width: 100%;
+}}}

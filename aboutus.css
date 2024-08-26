@@ -14,79 +14,88 @@ body{
     line-height: 1.5;
 }
  
-nav{
-    background: white;
-    height: 80px;
-    width: 100%;
-}
-
-
-
-nav .logo-img {
-  margin-top: 0;
-  padding-top: 0;
-  height: 110px;
+/* Logo*/
+.logo img{
   width: 110px;
-  vertical-align: middle; /* align logo image vertically */
 }
-
-nav .logo {
-  line-height: 80px; /* align company name vertically */
-  display: inline-block; /* display company name inline with logo image */
+.logo{
+  flex: 1;
 }
-
+/* Nav*/
+nav{
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  height: 90px;/* increase navbar height*/
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
 nav ul{
-  float: right;
-  margin-right:20px;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
 }
-
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
+nav li{
+  height: 50px;
 }
-
-nav ul li a{
-  display: inline-block;
-  font-size:20px;
-  padding: 5px 15px;
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
   color: black;
 }
-
 nav a:hover{
-  color:rgb(128, 255, 212);
+  color:aquamarine;
   transition: .05s ease;
 }
 
+nav a, .sidebar a {
+  padding: 10px 20px; /* Adjust for better spacing */
+  font-size: 18px; /* Make it a bit larger for readability */
+}
 
-.side-bar{
+
+/* Sidebar*/
+  .sidebar {
     position: fixed;
     top: 0;
-    width:100%;
+    right: -300px; /* Makes sure this is off-screen */
     height: 100vh;
-    max-width: none;
-    z-index: 999;
-    backdrop-filter: blur(10px);
-    background-color:rgba(255, 255, 255, 0.2);
-    margin-left: 80%;
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
-    display:none;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for less transparency */
+    backdrop-filter: blur(15px); /* Adjust the blur effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
+    list-style: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    transition: right 0.5s ease-in-out; /* Smooth slide effect */
+      z-index: 1000; /* Ensures it stays on top of other elements */
+    }
+  
+  .menu-button {
+    display: block;
   }
-
-.side-bar li{
-  width: 100%;
-}
-
-.side-bar a{
-  width: 100%;
-}
-
-.menu-button{
-  display: none;
-}
+  
+  .sidebar-open .menu-button {
+    display: none; /* Hide menu icon when sidebar is open */
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
 
 
 .banner{

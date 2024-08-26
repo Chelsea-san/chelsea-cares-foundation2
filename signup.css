@@ -1,16 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins';
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.split-screen{
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+
+}
+
+.split-screen .left{
+    float: left;
+    width: 50%;
+    background-image: url('./img/128103.jpg');
+    background-size: cover; /* Add this to ensure the image covers the entire div */
+    height: 100vh; /* Add this to ensure the div takes up the full height */
 }
 
 
-body{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.split-screen .right{
     background-color: #86EAE9;
+    float: left;
+    width: 50%;
 }
+
 
 .login{
     display: flex;

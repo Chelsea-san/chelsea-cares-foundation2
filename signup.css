@@ -1,30 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 .split-screen{
-    display: flex;
     height: 100vh;
+    display: flex;
     justify-content: flex-start;
 
 }
@@ -32,30 +17,87 @@
 .split-screen .left{
     float: left;
     width: 50%;
-    background-image: url('./img/128103.jpg');
+    background-image: url('./img/contact.jpg');
     background-size: cover; /* Add this to ensure the image covers the entire div */
-    height: 100vh; /* Add this to ensure the div takes up the full height */
+    height: 100vh; 
+    position: relative;
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+.left .content{
+    max-width:800px;
+    text-align: center;
+}
+
+.left .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+
+.left .content p{
+    font-weight: 300;
+    color: #fff;
 }
 
 
 
 
+.contact-contain{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+}
+
+
+.contact-contain .contactinfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-contain .contactinfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contact-contain .contactinfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+
+.contact-contain .contactinfo .box .contact-text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-size: 300;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.contact-contain .contactinfo .box .contact-text h3{
+    font-weight: 500;
+    color: #86EAE9;
+}
 
 
 
@@ -136,7 +178,7 @@
     
 }
 
-.btn-hover{
+.btn:hover{
     opacity: 0.82;
 }
 
@@ -147,4 +189,26 @@
 
 .signup-link{
     margin-bottom: 15px;
+}
+
+.signup-link a{
+    color: #5a9c9b;
+}
+
+
+@media(max-width: 990px){
+
+    .split-screen .left{
+    padding: 50px;
+    }
+    .contact-contain{
+    flex-direction: column;
+    }
+    .contact-contain .contactinfo {
+    margin-bottom: 40px;
+    }
+    .container .contactinfo{
+        width: 100%;
+    }
+
 }

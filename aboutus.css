@@ -14,79 +14,88 @@ body{
     line-height: 1.5;
 }
  
-nav{
-    background: white;
-    height: 80px;
-    width: 100%;
-}
-
-
-
-nav .logo-img {
-  margin-top: 0;
-  padding-top: 0;
-  height: 110px;
+/* Logo*/
+.logo img{
   width: 110px;
-  vertical-align: middle; /* align logo image vertically */
 }
-
-nav .logo {
-  line-height: 80px; /* align company name vertically */
-  display: inline-block; /* display company name inline with logo image */
+.logo{
+  flex: 1;
 }
-
+/* Nav*/
+nav{
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  height: 90px;/* increase navbar height*/
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
 nav ul{
-  float: right;
-  margin-right:20px;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
 }
-
-nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
+nav li{
+  height: 50px;
 }
-
-nav ul li a{
-  display: inline-block;
-  font-size:20px;
-  padding: 5px 15px;
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
   color: black;
 }
-
 nav a:hover{
-  color:rgb(128, 255, 212);
+  color:aquamarine;
   transition: .05s ease;
 }
 
+nav a, .sidebar a {
+  padding: 10px 20px; /* Adjust for better spacing */
+  font-size: 18px; /* Make it a bit larger for readability */
+}
 
-.side-bar{
+
+/* Sidebar*/
+  .sidebar {
     position: fixed;
     top: 0;
-    width:100%;
+    right: -300px; /* Makes sure this is off-screen */
     height: 100vh;
-    max-width: none;
-    z-index: 999;
-    backdrop-filter: blur(10px);
-    background-color:rgba(255, 255, 255, 0.2);
-    margin-left: 80%;
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
-    display:none;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for less transparency */
+    backdrop-filter: blur(15px); /* Adjust the blur effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
+    list-style: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    transition: right 0.5s ease-in-out; /* Smooth slide effect */
+      z-index: 1000; /* Ensures it stays on top of other elements */
+    }
+  
+  .menu-button {
+    display: block;
   }
-
-.side-bar li{
-  width: 100%;
-}
-
-.side-bar a{
-  width: 100%;
-}
-
-.menu-button{
-  display: none;
-}
+  
+  .sidebar-open .menu-button {
+    display: none; /* Hide menu icon when sidebar is open */
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
 
 
 .banner{
@@ -94,7 +103,7 @@ nav a:hover{
   margin: auto;
   margin: 100px 0 100px 0;
   background-color:#135085;
-  color:#37C9EF;
+  color: whitesmoke;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -255,7 +264,7 @@ nav a:hover{
 
 
 .values h3{
-  color: #37C9EF;
+  color: black;
   font-size: 25px;
   margin-bottom: 15px;
 }
@@ -311,14 +320,19 @@ nav a:hover{
 
 
 
+
+/* Beginning of Footer*/
  
 /* Beginning of Footer*/
 .container{
   max-width: 1170px;
   margin:auto;
+  max-width: 1170px;
+  margin:auto;
 }
 .row{
   display: flex;
+  flex-wrap: wrap;
   flex-wrap: wrap;
 }
 ul{
@@ -330,11 +344,20 @@ ul{
 }
 .footer-col{
   width: 33.33%; /* Set each column to take up one-third of the row */
+.footer{
+  background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+  width: 33.33%; /* Set each column to take up one-third of the row */
   padding: 0 15px;
+  margin-bottom: 30px; /* Ensure there's space between rows on smaller screens */
   margin-bottom: 30px; /* Ensure there's space between rows on smaller screens */
 }
 .footer-col h4{
+.footer-col h4{
   font-size: 18px;
+  color: #ffffff;
   color: #ffffff;
   text-transform: capitalize;
   margin-bottom: 35px;
@@ -343,8 +366,13 @@ ul{
 }
 .footer-col h4::before{
   content: '';
+}
+.footer-col h4::before{
+  content: '';
   position: absolute;
   left:0;
+  bottom: -10px;
+  background-color:aquamarine;
   bottom: -10px;
   background-color:aquamarine;
   height: 2px;
@@ -357,10 +385,19 @@ ul{
   line-height: 1.6; /* Adds some line height for better spacing */
 }
 .footer-col ul li:not(:last-child){
+.footer-col p {
+  font-size: 16px; /* Makes the font size readable */
+  color: #bbbbbb; /* Uses a softer color to match the footer */
+  line-height: 1.6; /* Adds some line height for better spacing */
+}
+.footer-col ul li:not(:last-child){
   margin-bottom: 10px;
 }
 .footer-col ul li a{
+.footer-col ul li a{
   font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
@@ -370,9 +407,14 @@ ul{
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
+.footer-col ul li a:hover{
   color: #ffffff;
   padding-left: 8px;
 }
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 .footer-col .social-links a{
   display: inline-block;
   height: 40px;
@@ -381,14 +423,21 @@ ul{
   margin:0 10px 10px 0;
   text-align: center;
   line-height: 40px;
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
   border-radius: 50%;
   color: #ffffff;
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
+.footer-col .social-links a:hover{
   color: #24262b;
   background-color: #ffffff;
+  background-color: #ffffff;
 }
+
+/* End of Footer*/
 
 /* End of Footer*/
 
@@ -417,11 +466,39 @@ ul{
 }}}
 
 
+
+/* @media(max-width:1030px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+
+  }
+
+
+@media(max-width:412px){
+      .side-bar{
+        display: block;
+        width:100%;
+      }
+      nav ul li{
+        display: block;
+        width: 100%;
+      } 
+  }*/
+
 @media(max-width:1500px){
   .about-us-div{
       display: flex;
       flex-direction: column;
   }
+@media(max-width:800px){
+    .about-us-div{
+        display: grid;
+        flex-direction: column;
+    }
 
   .about-info{
       width:85%;
@@ -429,6 +506,24 @@ ul{
       margin: 20px 0px;
   }
 }
+    .about-info{
+        width:85%;
+        display: flex;
+        margin: 20px 0px;
+    }
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    .logo img{
+      display: block;
+    }
+    .footer-col{
+      width: 50%;
+  }
+  }
 
 @media(max-width: 445px){
   .founder-div{
@@ -446,3 +541,19 @@ ul{
   }
 
 }
+  @media(max-width: 400px){
+    .founder-div{
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+    .sidebar{
+      width: -100%;
+      right: -100%; /* Fully hides it off-screen */
+    }
+    .footer-col{
+      width: 100%;
+  }
+  }
+  

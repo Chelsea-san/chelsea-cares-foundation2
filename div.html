@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="div.css">
 </head>
 <body>
 
+    <div class="login">
+        <div class="form-box">
+            <header>Sign up</header>
+            <form action="" method="post">
+                <div class="field-input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" autocomplete="off" required>
+                </div>
 
-    <div class="founder-div">
-        <img src="./img/headshot.jpg" alt="Founder's Image" class="founder-img">
-        <div class="text">
-            <h2>Grasswell Chelsea Gabriella</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem iusto accusantium eos, repudiandae sapiente voluptates nobis laudantium deserunt obcaecati provident commodi natus ullam exercitationem dolores, distinctio fuga voluptatibus? Officia, eos.
-            </p>
-        </div>
+                <div class="field-input">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" autocomplete="off"  required>
+                </div>
 
-    </div>
+                <div class="field-input">
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" autocomplete="off"  required>
+                </div>
+
+                <div class="field-input">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password"  required>
+                </div>
+
+
+                <div class="field">
+                    <input type="submit" name="submit" class="btn"  value="login"  required>
+                </div>
+
+                <div class="signup-link">
+                    Already signed up? <a href="login.html">Log in</a>
+                </div>
 
 
 </body>

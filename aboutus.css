@@ -322,12 +322,17 @@ nav a, .sidebar a {
 
 
 /* Beginning of Footer*/
+ 
+/* Beginning of Footer*/
 .container{
+  max-width: 1170px;
+  margin:auto;
   max-width: 1170px;
   margin:auto;
 }
 .row{
   display: flex;
+  flex-wrap: wrap;
   flex-wrap: wrap;
 }
 ul{
@@ -337,13 +342,21 @@ ul{
   background-color: #24262b;
     padding: 70px 0;
 }
+
+.footer{
+  background-color: #24262b;
+    padding: 70px 0;
+}
 .footer-col{
   width: 33.33%; /* Set each column to take up one-third of the row */
   padding: 0 15px;
   margin-bottom: 30px; /* Ensure there's space between rows on smaller screens */
+  margin-bottom: 30px; /* Ensure there's space between rows on smaller screens */
 }
+
 .footer-col h4{
   font-size: 18px;
+  color: #ffffff;
   color: #ffffff;
   text-transform: capitalize;
   margin-bottom: 35px;
@@ -352,8 +365,13 @@ ul{
 }
 .footer-col h4::before{
   content: '';
+}
+.footer-col h4::before{
+  content: '';
   position: absolute;
   left:0;
+  bottom: -10px;
+  background-color:aquamarine;
   bottom: -10px;
   background-color:aquamarine;
   height: 2px;
@@ -365,11 +383,21 @@ ul{
   color: #bbbbbb; /* Uses a softer color to match the footer */
   line-height: 1.6; /* Adds some line height for better spacing */
 }
+
+.footer-col p {
+  font-size: 16px; /* Makes the font size readable */
+  color: #bbbbbb; /* Uses a softer color to match the footer */
+  line-height: 1.6; /* Adds some line height for better spacing */
+}
+
 .footer-col ul li:not(:last-child){
   margin-bottom: 10px;
 }
+
 .footer-col ul li a{
   font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
@@ -378,10 +406,12 @@ ul{
   display: block;
   transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover{
   color: #ffffff;
   padding-left: 8px;
 }
+
 .footer-col .social-links a{
   display: inline-block;
   height: 40px;
@@ -390,18 +420,47 @@ ul{
   margin:0 10px 10px 0;
   text-align: center;
   line-height: 40px;
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
   border-radius: 50%;
   color: #ffffff;
   transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover{
   color: #24262b;
+  background-color: #ffffff;
   background-color: #ffffff;
 }
 
 /* End of Footer*/
 
 
+
+
+/* Responsiveness*/
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+  .logo img{
+    display: block;
+  }
+  .footer-col{
+    width: 50%;
+}
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+    right: -100%; /* Fully hides it off-screen */
+  }
+  .footer-col{
+    width: 100%;
+}}}
 
 
 
@@ -427,12 +486,23 @@ ul{
       } 
   }*/
 
+@media(max-width:1500px){
+  .about-us-div{
+      display: flex;
+      flex-direction: column;
+  }
 @media(max-width:800px){
     .about-us-div{
         display: grid;
         flex-direction: column;
     }
 
+  .about-info{
+      width:85%;
+      display: flex;
+      margin: 20px 0px;
+  }
+}
     .about-info{
         width:85%;
         display: flex;
@@ -452,6 +522,22 @@ ul{
   }
   }
 
+@media(max-width: 445px){
+  .founder-div{
+      min-height: 30vh;
+      display: flex;
+      flex-direction: column;
+  }
+
+}
+
+@media(max-width: 250px){
+  .founder-div{
+      width: 25%;
+      min-height: 30vh;
+  }
+
+}
   @media(max-width: 400px){
     .founder-div{
         min-height: 30vh;

@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure body is set up correctly for flex layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes full height */
+  font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* body{
+  background-color: #f5f5f5;
+  font-family: 'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+/* Logo*/
+.logo img{
+  width: 110px;
+}
+.logo{
+  flex: 1;
+}
+/* Nav*/
+nav{
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  position: relative;
+  height: 90px;/* increase navbar height*/
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 50px;
+}
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+nav a:hover{
+  color:aquamarine;
+  transition: .05s ease;
+}
+
+nav a, .sidebar a {
+  padding: 10px 20px; /* Adjust for better spacing */
+  font-size: 18px; /* Make it a bit larger for readability */
+}
+
+
+/* Sidebar*/
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Makes sure this is off-screen */
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.9); /* Increased opacity for less transparency */
+    backdrop-filter: blur(15px); /* Adjust the blur effect */
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.5s ease-in-out; /* Smooth slide effect */
+      z-index: 1000; /* Ensures it stays on top of other elements */
+    }
+  
+  .menu-button {
+    display: block;
+  }
+  
+  .sidebar-open .menu-button {
+    display: none; /* Hide menu icon when sidebar is open */
+  }
+  .sidebar li{
+    width: 100%;
+  }
+  .sidebar a{
+    width: 100%;
+  }
+  .menu-button{
+    display: none;
+  }
+  
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.What-We-Offer p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.img-container, .text-container {
+    flex: 1;
+    padding: 10px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+.stats {
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Beginning of Footer*/
+.container{
+  width: 100%;
+  max-width: 1170px; /* Maintain the max-width constraint */
+  margin: 0 auto; /* Center the container */
+  padding: 0 15px; /* Add padding to avoid content touching the edges */
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px; /* Adjust for padding */
+}
+ul{
+  list-style: none;
+}
+.footer{
+  width: 100%;
+  background-color: #24262b;
+  padding: 70px 0;
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+.footer-col{
+    flex: 1; /* Allow columns to grow and fill the space */
+    padding: 0 15px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-bottom: 30px; /* Space between rows */
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color:aquamarine;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col p {
+  font-size: 16px; /* Makes the font size readable */
+  color: #bbbbbb; /* Uses a softer color to match the footer */
+  line-height: 1.6; /* Adds some line height for better spacing */
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/* End of Footer*/
+
+
+  
+/* Responsiveness*/
+@media(max-width: 800px){
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    .logo img{
+      display: block;
+    }
+    .footer-col{
+      width: 50%;
+  }
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-text {
+      width: 100%;
+    }
+  }
+  @media(max-width: 400px){
+    header, footer {
+        font-size: 0.9rem;
+    }
+    .sidebar{
+      width: -100%;
+      right: -100%; /* Fully hides it off-screen */
+    }
+    .footer-col{
+      width: 100%;
+    }
+      h2 {
+        font-size: 1.5rem;
+    }
+  
+    h3 {
+        font-size: 1.2rem;
+    }
+  
+    p {
+        font-size: 0.9rem;
+    }
+}
+  

@@ -109,6 +109,7 @@ nav a, .sidebar a {
       padding: 70px 0;
   }
   .footer-col{
+    flex: 1; /* Allow columns to grow and fill the space */
     width: 33.33%; /* Set each column to take up one-third of the row */
     padding: 0 15px;
     margin-bottom: 30px; /* Ensure there's space between rows on smaller screens */
@@ -189,7 +190,7 @@ nav a, .sidebar a {
   }
   .footer-col{
     width: 50%;
-}
+}}
 @media(max-width: 400px){
   header, footer {
     font-size: 0.9rem;
@@ -200,4 +201,4 @@ nav a, .sidebar a {
   }
   .footer-col{
     width: 100%;
-}}}
+}}

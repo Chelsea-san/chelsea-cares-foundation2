@@ -1,216 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
-    <link rel="stylesheet" href="aboutus.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"><!--For the Footer Social links icons-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCF</title>
+  <link rel="stylesheet" href="aboutus.css"><!--link to CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"><!--For the Footer Social links icons-->
 </head>
+
 <body>
-    <nav>
-        <!--Logo-->
-        <div class="logo">
-          <img src="img/foundation logo.png" alt="logo">
-        </div>
-    
-    <!--Sidebar-->
-        <ul class="sidebar">
-          <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="aboutus.html">About us</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="#">Donate</a></li>
-        </ul>
-        <ul>
-          <li class="hideOnMobile"><a href="home.html">Home</a></li> 
-          <li class="hideOnMobile"><a href="aboutus.html">About Us</a></li> 
-          <li class="hideOnMobile"><a href="programs.html">Programs</a></li>
-          <li class="hideOnMobile"><a href="#">Donate</a></li>
-          <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
-        </ul>
-      </nav> 
+  <header>
+      <nav>
+          <!--Logo-->
+          <div class="logo">
+            <img src="img/foundation logo.png" alt="logo">
+          </div>
+      
+          <!--Sidebar-->
+          <ul class="sidebar">
+            <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="donate.html">Donate</a></li>
+          </ul>
+          <ul>
+            <li class="hideOnMobile"><a href="home.html">Home</a></li> 
+            <li class="hideOnMobile"><a href="aboutus.html">About Us</a></li> 
+            <li class="hideOnMobile"><a href="programs.html">Programs</a></li>
+            <li class="hideOnMobile"><a href="donate.html">Donate</a></li>
+            <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+          </ul>
+        </nav>
+  </header>
+  
+  <main>
+    <!-- Who We Are Section -->
+    <section class="who-we-are">
+        <h2>Who We Are</h2>
+        <p>Chelsea Cares Foundation was founded by a group of passionate advocates for women’s rights with a mission to support and empower women survivors of domestic violence.</p>
+    </section>
 
-
-
-
-    <div class="about-us">
-        <div class="about-us-title">
-           <h1>About Us</h1> 
-        </div>
-
-        <div class="about-us-img1">
-        </div>
-
-
-        <div class="banner">
-            <h2>Who We Are</h2>
-            <p>
-                Chelsea Cares Foundation is a non-profit organization dedicated to providing emotional support, advocacy, and resources to women living in the aftermath of domestic violence. Our mission is to empower and support women survivors of violence by providing them with the resources, guidance, and advocacy they need to rebuild their lives.
-            </p>
-        </div>
-
-
-
-
-        <div class="about-us-div">
-
-
-
-
-            <div class="about-info">
-                <div class="icon">
-
-                </div>
-                <h2>Mission & Vision</h2>
-                <h3>Mission</h3>
-                <p>
-                    Our mission at Chelsea Cares Foundation is to empower and support women survivors of domestic violence by providing them with the resources, guidance, and advocacy they need to rebuild their lives. We are committed to creating a safe and nurturing environment where every woman can access the help she deserves, free from judgment or fear.
-                </p>
-                <h3>Vision</h3>
-                <p>
-                    We envision a world where no woman has to suffer in silence. A world where every woman, regardless of her circumstances, has the opportunity to live a life free from abuse and fear. Through our dedicated efforts and community-driven initiatives, we strive to break the cycle of domestic violence against women and create lasting change, one life at a time.
-                </p>
+    <!-- Mission and Vision Section -->
+    <section class="about-us">
+        <div class="container">
+            <div class="box">
+                <img src="img/mission.jpg" alt="Mission Image">
+                <h3>Our Mission</h3>
+                <p>At Chelsea Cares Foundation, Our mission is to provide comprehensive support to women survivors of domestic abuse. We are dedicated to offering emergency shelter, counseling, legal assistance, and advocacy to those in need. Our aim is to empower women to regain their strength, rebuild their lives, and find their voice once again.</p>
             </div>
+            <div class="box">
+                <img src="img/DOMESTIC VIOLENCE.png" alt="Vision Image">
+                <h3>Our Vision</h3>
+                <p>We envision a world where domestic abuse is a distant memory, where every woman lives free from fear and has the resources to pursue her dreams. Chelsea Cares Foundation is more than an organization; it’s a movement toward justice, equality, and empowerment.
 
-
-            <div class="about-info">
-                <div class="icon">
-
-                </div>
-                <h2>Our programs & Services</h2>
-        
-                <p>
-                    Chelsea Cares Foundation is committed to offering vital support to women impacted by domestic violence. Our comprehensive programs are designed to provide safety, healing, and empowerment to survivors.
-                    <h3>
-                        Emergency Shelter and Safe Housing:
-                    </h3>
-                    We offer immediate and confidential shelter for women and children escaping abusive situations. 
-                    
-                    <h3>
-                        Counseling and Mental Health Support:
-                    </h3>
-                         We focus on building resilience and supporting long-term recovery.
-                    <h3>
-                        Legal Assistance and Advocacy: 
-                    </h3>
-                    
-                    We guide survivors through the legal system, offering support in areas such as restraining orders, custody cases, and other legal matters related to domestic violence.
-                    <h3>
-                        Child Support Services:
-                    </h3>
-                    We understand the impact of domestic violence on children.
-                   </h3>
-                </p>
-                <a href="" class="button">Learn more</a>
-
-
-            </div>
-
-
-            <div class="about-info">
-                <div class="icon">
-
-                </div>
-                <h2>Our Impact</h2>
-                <p>Chelsea Cares Foundation has made a global impact by empowering women affected by domestic violence in over 30 countries. 
-                    We have supported more than 100,000 women in escaping abuse and rebuilding their lives. 
-                    Our safe housing program has provided emergency shelter to over 10,000 women, offering a secure space for recovery. 
-                    Through our counseling and mental health services, over 20,000 survivors have healed from trauma and regained control of their lives. Our legal advocacy has helped countless women navigate complex legal challenges, securing protection orders and other crucial outcomes, while also contributing to policy changes that enhance protections for women globally. 
-                    Chelsea Cares Foundation remains committed to creating lasting change, ensuring that women worldwide can live free from abuse and fear.
-                </p>
+                  Join us in our mission to transform lives and make a lasting impact. Together, we can create a world where every woman is empowered to rise above her circumstances and achieve her fullest potential.</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <hr>
-
-
-
-    <div class="values">
-        <h3>Our Values</h3>
-        <ul>
-            <li>Respect and empathy</li>
-            <li>Equality and inclusion</li>
-            <li>Transparency and accountability</li>
-            <li>Self-sufficiency and self-care</li>
-        </ul>
-    </div>
-
-    <hr>
-
-    <div class="founder-div">
-        <img src="./img/headshot.jpg" alt="Founder's Image" class="founder-img">
-        <div class="text">
-            <h2>Grasswell Chelsea Gabriella</h2>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem iusto accusantium eos, repudiandae sapiente voluptates nobis laudantium deserunt obcaecati provident commodi natus ullam exercitationem dolores, distinctio fuga voluptatibus? Officia, eos.
-            </p>
+    <!-- Our Impact Section -->
+    <section class="about-us">
+        <div class="container">
+            <div class="box">
+                <img src="img/impact.jpg" alt="Impact Image">
+                <h3>Our Impact</h3>
+                <p>Chelsea Cares Foundation has made a remarkable impact across over 30 countries, transforming the lives of more than 100,000 women. Our emergency shelters have provided critical safety and support to over 10,000 women in need. Additionally, our dedicated efforts have facilitated healing and recovery for over 20,000 survivors of trauma. Each achievement underscores our commitment to fostering resilience and driving meaningful change, creating a brighter future for women everywhere.</p>
+            </div>
+            <div class="box">
+                <img src="img/values.jpg" alt="Values Image">
+                <h3>Our Values</h3>
+                <p>At Chelsea Cares Foundation, our values guide every action and decision, reflecting our unwavering commitment to supporting women survivors of domestic abuse and promoting empowerment. Our values are the cornerstone of our mission and it drive us to make a meaningful difference in the lives of women around the world. Through our dedication to these principles, we strive to foster a world where every woman is empowered, respected, and able to thrive.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    
+    <!-- Why it matters -->
+    <section class="programs-services">
+      <h2>Why It Matters</h2>
+      <p>Every statistic represents a real person with a story. Behind every case of domestic abuse is a woman who deserves safety, respect, and the opportunity to thrive. By founding this organization, Chelsea has committed to making a tangible difference in the lives of thousands of women, ensuring that they receive the care and support they rightfully deserve.</p>
+  </section>
+
+    <!-- Our Programs & Services Section -->
+    <section class="programs-services">
+      <h2>Our Programs & Services</h2>
+      <p>Chelsea Cares Foundation is committed to offering vital support to women impacted by domestic violence. Our comprehensive programs are designed to provide safety, healing, and empowerment to survivors.</p>
+      <ul>
+          <li><strong>Emergency Shelter and Safe Housing:</strong></li>
+          <p>We offer immediate and confidential shelter for women and children escaping abusive situations.</p>
+          <li><strong>Counseling and Mental Health Support:</strong></li>
+          <p>We focus on building resilience and supporting long-term recovery.</p>
+          <li><strong>Legal Assistance and Advocacy:</strong></li>
+          <p>We guide survivors through the legal system, offering support in areas such as restraining orders, custody cases, and other legal matters related to domestic violence.</p>
+          <li><strong>Child Support Services:</strong></li>
+            <p>We understand the impact of domestic violence on children.</p>
+      
+              <div class="learn-more-container">
+                  <a href="#" class="learn-more-btn">Learn more</a>
+              </div>
+          
+      </ul>
+  </section>
+
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="founder-image">
+            <img src="img/headshot.jpg" alt="Founder Image">
+        </div>
+        <div class="founder-text">
+            <h3>Why We Founded Chelsea Cares Foundation</h3>
+            <p>In a world where many women face unimaginable challenges, the inception of Chelsea Cares Foundation is rooted in a profound commitment to stand against domestic abuse and champion women’s empowerment. Our founder, Grasswell Chelsea Gabriella, was driven by a personal experience and a deep-seated belief in the power of compassion and advocacy.
+
+              <br><strong>Our Journey</strong><br>
+              
+              Chelsea’s journey began with witnessing the harsh realities faced by women living in the shadows of domestic violence. She saw firsthand how systemic barriers and societal stigmas often left survivors feeling isolated and voiceless. Motivated by a vision of a world where every woman has the support and resources to rebuild her life, Chelsea established the foundation to create a beacon of hope and resilience.</p>
+        </div>
+    </section>
+</main>
+
 <!--Beginning of Footer-->
 <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="footer-col">
-          <h4>Address</h4>
-          <p>ChelseaCares Foundation<br>
-             123 Hope Avenue, Suite 456<br>
-             Unity District, Lagos, Nigeria<br><br>
-             Phone: +234 812 345 6789<br>
-             Email: info@chelseacaresfoundation.org
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Our Foundation</h4>
-          <ul>
-              <li><a href="aboutus.html">About Us</a></li>
-              <li><a href="programs.html">Programs</a></li>
-              <li><a href="#">Donate</a></li>
-              <li><a href="#">Get help</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <ul>
-              <li><a href="#">Newsletter</a></li>
-              <li><a href="#">Contact Us</a></li>
-          </ul>
-        </div> 
-        <div class="footer-col">
-          <h4>Connect with Us</h4>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>  
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Address</h4>
+        <p>ChelseaCares Foundation<br>
+           123 Hope Avenue, Suite 456<br>
+           Unity District, Lagos, Nigeria<br><br>
+           Phone: +234 812 345 6789<br>
+           Email: info@chelseacaresfoundation.org
+        </p>
       </div>
+      <div class="footer-col">
+        <h4>Our Foundation</h4>
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="#">Get help</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div> 
+      <div class="footer-col">
+        <h4>Connect with Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>  
     </div>
-  </footer>
-   <!--End of Footer-->
+  </div>
+</footer>
+ <!--End of Footer-->
 
-<!--Beginning of JS-->
-<script>
-    function showSidebar(){
-      const sidebar = document.querySelector('.sidebar');
-      sidebar.style.right = '0'; // Slide in from right
-      document.body.classList.add('sidebar-open'); // Add class to hide menu button
-    }
-  
-    function hideSidebar(){
-      const sidebar = document.querySelector('.sidebar');
-      sidebar.style.right = '-250px'; // Slide out to the right
-      document.body.classList.remove('sidebar-open'); // Remove class to show menu button again
-    }
-  </script>
-  <!--End of JS-->
-
-   
  <!--Beginning of JS-->
   <script>
     function showSidebar(){
@@ -225,9 +177,7 @@
       document.body.classList.remove('sidebar-open'); // Remove class to show menu button again
     }
   </script>
-  <!--End of JS-->
-
-
+<!--End of JS-->
 
 </body>
 </html>

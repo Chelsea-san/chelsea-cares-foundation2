@@ -188,9 +188,11 @@
 .button:hover{
     opacity: 0.82;
 }
+
 .alert{
     width: 100%;
-    background: rgb(0, 255, 106);
+    background: black;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-align: center;

@@ -418,6 +418,26 @@ p {
 /* Responsiveness*/
 @media(max-width: 800px){
 
+.who-we-are section{
+  height: auto;
+}
+  .who-we-are{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .who-we-are h1 {
+    font-size: 1.7rem;
+}
+
+.who-we-are h3 {
+    font-size: 1.2rem;
+}
+
+.who-we-are p {
+    font-size: 0.9rem;
+}
 
     .about-us .container {
         flex-direction: column;

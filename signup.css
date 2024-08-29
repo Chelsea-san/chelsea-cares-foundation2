@@ -120,7 +120,7 @@
 }
 
 
-.login{
+.contact-form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,7 +148,7 @@
     margin-bottom: 10px;
 }
 
-.form-box .field{
+.form-box .inputBox{
     display: flex;
     margin-bottom: 10px;
     flex-direction: column;
@@ -165,7 +165,13 @@
 
 }
 
-.btn{
+
+
+
+
+
+.inputBox button{
+    width: 100%;
     height: 35px;
     background: #135085;
     border: 0;
@@ -176,24 +182,21 @@
     transition: all .3s;
     margin-top: 10px;
     padding: 0px 10px;
-    
-}
+} 
 
-.btn:hover{
+
+.button:hover{
     opacity: 0.82;
 }
-
-
-.submit{
+.alert{
     width: 100%;
-}
-
-.signup-link{
-    margin-bottom: 15px;
-}
-
-.signup-link a{
-    color: #5a9c9b;
+    background: rgb(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
 }
 
 
